@@ -1,0 +1,11 @@
+import express from "express";
+import { verifyToken, isAdmin } from "./verification.js";
+import * as Controller from "../controllers/catController.js";
+const router = express.Router();
+router.get("/", Controller.get_categories);
+router.get("/:category_id", Controller.get_category);
+router.get("/:category_id/posts", Controller.get_posts_with_category);
+router.post("/", verifyToken, isAdmin, Controller.post_category);
+router.patch("/:category_id", verifyToken, isAdmin, Controller.patch_category);
+router.delete("/:category_id", verifyToken, isAdmin, Controller.delete_category);
+export default router;

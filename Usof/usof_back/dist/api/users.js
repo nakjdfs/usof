@@ -1,0 +1,16 @@
+import express from "express";
+import path from "path";
+import fs from "fs";
+import { verifyToken, isAdmin } from "./verification.js";
+import { User, UserRole } from "../models/user.entity.js";
+import data from '../config.json' assert { type: "json" };
+import * as Controller from "../controllers/userController.js";
+const router = express.Router();
+router.get("/", Controller.get_users);
+router.get("/:user_id", Controller.get_user);
+router.post("/", verifyToken, isAdmin, Controller.post_user);
+router.get("/:user_id/avatar", Controller.get_avatar);
+router.patch("/avatar", verifyToken, Controller.patch_avatar);
+router.patch("/:user_id", verifyToken, Controller.patch_user);
+router.delete("/:user_id", verifyToken, Controller.delete_user);
+export default router;

@@ -1,0 +1,37 @@
+{
+  "type": "module",
+  "name": "usofback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/app.ts",
+  "dependencies": {
+    "@adminjs/express": "^6.0.1",
+    "@adminjs/passwords": "^4.0.0",
+    "@adminjs/sequelize": "^4.0.0",
+    "adminjs": "^7.3.0",
+    "argon2": "^0.31.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "express-formidable": "^1.2.0",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.3",
+    "nodemailer": "^6.9.7",
+    "sequelize": "^6.34.0",
+    "tslib": "^2.6.2"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc-watch --onSuccess \"node dist/app.js\"",
+    "dev": "npm run build && npm run watch"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/express-session": "^1.17.9",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.2.2"
+  }
+}

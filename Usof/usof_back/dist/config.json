@@ -1,0 +1,17 @@
+{
+    "database": {
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "usofdb",
+        "connectionLimit": 10,
+        "charset": "utf8mb4",
+        "portDB": "3306",
+        "port": 3002,
+        "pictures": "/pictures/",
+        "defpicture": "/defpicture.jpg",
+        "mailkey": "fa90cb605cdbf91dcfa6e812ec6ea082a1d443e1401fce05988b10af306d24999ad77e1a583ad5d273cf31d1dca9e540ba933afb7375b5e962fc24ce134b7f89",
+        "passwordkey": "617df9d07f8f7329b6b2808140ebf77089af08be5b0a4c22a1c23b3852aa",
+        "accesskey": "1f40d7ecb056cd29ef0567372e59dc77f544eca327400c83b67992d5c3ca9b91c950c076851ea0be2e44c4955886ad6a71bae18cb5622807a20d8cad266806bb"
+    }
+}

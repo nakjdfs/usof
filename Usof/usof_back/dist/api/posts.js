@@ -1,0 +1,16 @@
+import express from "express";
+import { verifyToken, isAdmin } from "./verification.js";
+import * as Controller from "../controllers/postController.js";
+const router = express.Router();
+router.get("/", Controller.get_posts);
+router.get("/:post_id", Controller.get_post);
+router.get("/:post_id/comments", Controller.get_comments);
+router.post("/:post_id/comments", verifyToken, Controller.post_comments);
+router.get("/:post_id/categories", Controller.get_categories);
+router.get("/:post_id/like", Controller.get_likes);
+router.post("/", verifyToken, Controller.post_post);
+router.post("/:post_id/like", verifyToken, Controller.post_like);
+router.patch("/:post_id", verifyToken, Controller.patch_post);
+router.delete("/:post_id", verifyToken, Controller.delete_post);
+router.delete("/:post_id/like", verifyToken, Controller.delete_like);
+export default router;
